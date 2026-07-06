@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ChainLink Survey — your total station, no data collector</title>
-<meta name="description" content="Run a total station straight from your phone — no data collector. Shoot points, run the COGO, and see your work on live aerial imagery. One GPS fix puts the job on State Plane coordinates and guides you to any point. Free to use, no account.">
+<meta name="description" content="Run a total station straight from your phone — no data collector. Shoot points, run the COGO, and see your work on live aerial imagery. Paste a deed and watch it plot itself — exceptions, easements, and net acreage included. One GPS fix puts the job on State Plane coordinates. Free, no account.">
 <link rel="canonical" href="https://chainlinksurvey.com/">
 
 <meta property="og:type" content="website">
@@ -26,7 +26,7 @@
   "applicationCategory": "UtilitiesApplication",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "url": "https://app.chainlinksurvey.com",
-  "description": "Total station field data collection and COGO on a phone: shot reduction, traverse adjustment, stakeout, areas, GPS start on State Plane coordinates, live aerial imagery backdrop, and exports to CSV, DXF, LandXML, and KML.",
+  "description": "Total station field data collection and COGO on a phone: shot reduction, traverse adjustment, stakeout, areas, GPS start on State Plane coordinates, live aerial imagery backdrop, deed plotting from pasted legal descriptions with exceptions and easements, and exports to CSV, DXF, LandXML, and KML.",
   "author": { "@type": "Person", "name": "Michael P. Ross" }
 }
 </script>
@@ -174,6 +174,7 @@ footer .legal{max-width:70ch;margin-top:18px;font-size:.92em}
     <li><b>Starts a job on your state's official coordinate grid</b> from one GPS fix, with the ground elevation filled in from USGS survey data</li>
     <li><b>Shows your work over live aerial imagery or USGS topo maps</b>, with your position as a blue dot — and saves the imagery for offline use</li>
     <li><b>Walks you to any point</b> with live distance and direction — handy for finding a corner in the brush</li>
+    <li><b>Plots deeds from pasted text or a photo</b> — boundary, carve-outs, and easements at their right-of-way width, with net acreage from true arc math</li>
     <li>Send your work to the office — CSV, DXF, LandXML, KML for Google Earth, a PDF plot or field book</li>
     <li>Works with no signal. Pan, zoom, and tap the plot to fix anything</li>
   </ul>
@@ -182,13 +183,19 @@ footer .legal{max-width:70ch;margin-top:18px;font-size:.92em}
 <section id="phone">
   <div class="kicker">The phone earns its keep</div>
   <h2>It knows where it's standing.</h2>
-  <div class="split">
-    <div class="txt">
-      <p>A data collector only knows the numbers you feed it. Your phone also knows where it is on Earth — so ChainLink uses that.</p>
-      <p>Stand at your starting point and take one GPS fix: the job lands on your state's real coordinate grid, the aerial photo lines up behind your linework, and from then on a blue dot shows where you are on your own survey. Pick any point and the app gives you live distance and direction to walk to it.</p>
-      <p>Scouting a property? Drop a pin at anything you find — an iron, a gate, a culvert — and it's stored as a point, clearly tagged as GPS-grade so it's never confused with an instrument shot. The precise work still belongs to the gun; the phone gets you there and shows you the whole picture.</p>
-    </div>
-  </div>
+  <p>A data collector only knows the numbers you feed it. Your phone also knows where it is on Earth — so ChainLink uses that.</p>
+  <p>Stand at your starting point and take one GPS fix: the job lands on your state's real coordinate grid, the aerial photo lines up behind your linework, and from then on a blue dot shows where you are on your own survey. Pick any point and the app gives you live distance and direction to walk to it.</p>
+  <p>Scouting a property? Drop a pin at anything you find — an iron, a gate, a culvert — and it's stored as a point, clearly tagged as GPS-grade so it's never confused with an instrument shot. The precise work still belongs to the gun; the phone gets you there and shows you the whole picture.</p>
+</section>
+
+<section id="deeds">
+  <div class="kicker">New · Deed plotting</div>
+  <h2>Paste a deed. Watch it draw itself.</h2>
+  <p>Paste a legal description — from a deed search, a title commitment, or a photo of the paper — and ChainLink reads the calls: bearings, distances, curves, even the old units (chains, links, rods, poles, varas, meters). Then it plots the tract <b>on the aerial imagery, right where the land is</b>.</p>
+  <p>It reads the whole record, not just the perimeter. Carve-outs ("less and except") and easements come in as their own figures, each placed by its own tie courses from the point of beginning — easements drawn at their stated right-of-way width. Net acreage comes out with curves computed as true arcs, not chord shortcuts.</p>
+  <p>And it's honest software: a carve-out that lands outside its parent tract gets flagged on the plot, not painted over. Sometimes that's a figure waiting to be placed. Sometimes you've just found a defect in the record — the kind of thing a retracement surveyor gets paid to notice.</p>
+  <p>Then the part no desktop deed program can do: put the phone in your pocket and <b>walk to the corners</b>. Every plotted corner is a live point — stakeout, inverse, and GPS navigation all work on it.</p>
+  <p><b>One honest tip:</b> the built-in 📷 camera works offline, but its text reading is rough. <b>Google Lens reads deeds far better</b> — snap the page with Lens, copy the text, and paste it in. A scanner app that makes searchable PDFs (Adobe Scan, Microsoft Lens) works even better for multi-page deeds: the app reads the PDF's text directly.</p>
 </section>
 
 <section id="install">
