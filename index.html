@@ -1,22 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ChainLink Survey — your total station, no data collector</title>
-<meta name="description" content="Run a total station straight from your phone — no data collector. Shoot points, run the COGO, and see your work on live aerial imagery. Paste a deed and watch it plot itself — exceptions, easements, and net acreage included. One GPS fix puts the job on State Plane coordinates, with NGS benchmarks and their published positions on the map. In beta — free for now, no account.">
-<link rel="canonical" href="https://chainlinksurvey.com/">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="ChainLink Survey — your total station, no data collector">
-<meta property="og:description" content="A survey data collector already in your pocket. Field data, COGO, stakeout, GPS start on State Plane coordinates, NGS benchmarks with published positions, and your work drawn over live aerial imagery. In beta — free for now, no account.">
-<meta property="og:url" content="https://chainlinksurvey.com/">
-<meta property="og:image" content="https://chainlinksurvey.com/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://chainlinksurvey.com/og-image.jpg">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ChainLink Survey — Pocket Data Collector for Total Station Work</title>
+<meta content="Run a total station straight from your phone — no data collector. Shoot points, run the COGO, and see your work on live aerial imagery. Paste a deed and watch it plot itself — exceptions, easements, and net acreage included. One GPS fix puts the job on State Plane coordinates, with NGS benchmarks and their published positions on the map. In beta — free for now, no account." name="description"/>
+<link href="https://chainlinksurvey.com/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="ChainLink Survey — your total station, no data collector" property="og:title"/>
+<meta content="A survey data collector already in your pocket. Field data, COGO, stakeout, GPS start on State Plane coordinates, NGS benchmarks with published positions, and your work drawn over live aerial imagery. In beta — free for now, no account." property="og:description"/>
+<meta content="https://chainlinksurvey.com/" property="og:url"/>
+<meta content="https://chainlinksurvey.com/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://chainlinksurvey.com/og-image.jpg" name="twitter:image"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -30,232 +29,250 @@
   "author": { "@type": "Person", "name": "Michael P. Ross" }
 }
 </script>
-
-<style>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><style>
 :root{
-  --bg:#12100a;
-  --panel:#1b180f;
-  --panel2:#211d12;
-  --amber:#d9a13c;
-  --amber-dim:#a87c2e;
-  --text:#d6d0bf;
-  --muted:#8f8a74;
-  --green:#7cc26b;
-  --line:rgba(217,161,60,.22);
-  --font-ui:'Courier New',ui-monospace,monospace;
-  --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --bg:#05090a;
+  --bg2:#081011;
+  --panel:rgba(16,25,26,.78);
+  --panel-solid:#10191a;
+  --panel-hi:#162223;
+  --glass:rgba(9,16,17,.72);
+  --brass:#e3b35b;
+  --brass-hi:#ffd783;
+  --brass-dim:#9a7134;
+  --cyan:#59d9d2;
+  --green:#79d68c;
+  --red:#ef7c70;
+  --text:#edf2ed;
+  --text2:#bbc6c0;
+  --muted:#74817c;
+  --line:rgba(227,179,91,.18);
+  --line-cool:rgba(89,217,210,.15);
+  --shadow:0 28px 80px rgba(0,0,0,.42);
+  --font-ui:'JetBrains Mono',ui-monospace,SFMono-Regular,Consolas,monospace;
+  --font-body:'Manrope',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --radius:20px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.65;font-size:17px}
-a{color:var(--amber)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{
+  min-height:100%;overflow-x:hidden;background:
+    radial-gradient(900px 600px at 83% 0%,rgba(89,217,210,.10),transparent 60%),
+    radial-gradient(900px 620px at 10% 10%,rgba(227,179,91,.09),transparent 58%),
+    linear-gradient(180deg,#071011 0%,#05090a 45%,#070c0d 100%);
+  color:var(--text);font-family:var(--font-body);line-height:1.72;font-size:16px;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.34;
+  background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:44px 44px;mask-image:linear-gradient(to bottom,black,transparent 82%);
+}
+a{color:var(--brass-hi)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+.wrap{width:min(1180px,calc(100% - 40px));margin:0 auto}
 
-.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+header{
+  position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;
+  min-height:78px;padding:14px 0;border-bottom:1px solid var(--line-cool);
+  background:linear-gradient(180deg,rgba(5,9,10,.94),rgba(5,9,10,.72));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)
+}
+.mark{display:inline-flex;align-items:center;gap:10px;color:var(--brass);text-decoration:none;font-family:var(--font-ui);letter-spacing:.21em;font-size:.78rem;white-space:nowrap}
+.mark .chain{display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--line);border-radius:11px;background:linear-gradient(145deg,rgba(227,179,91,.14),rgba(89,217,210,.03));font-size:1rem;letter-spacing:0;box-shadow:inset 0 1px rgba(255,255,255,.05)}
+.mark b{font-weight:700}.mark .lite{color:var(--muted);font-weight:500}
+.top-nav{display:flex;align-items:center;gap:22px;margin-left:auto}
+.top-nav a{color:var(--text2);text-decoration:none;font-size:.78rem;font-weight:700;letter-spacing:.05em}
+.top-nav a:hover{color:var(--text)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border:1px solid rgba(255,215,131,.34);border-radius:14px;
+  background:linear-gradient(180deg,var(--brass-hi),var(--brass));color:#171208;text-decoration:none;font-family:var(--font-ui);font-weight:800;font-size:.75rem;letter-spacing:.105em;text-transform:uppercase;
+  box-shadow:0 10px 28px rgba(227,179,91,.16),inset 0 1px rgba(255,255,255,.45);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease
+}
+.btn:hover{transform:translateY(-2px);filter:saturate(1.08);box-shadow:0 16px 34px rgba(227,179,91,.22),inset 0 1px rgba(255,255,255,.45)}
+.btn.small{min-height:42px;padding:10px 16px;font-size:.68rem;border-radius:12px}
 
-/* header */
-header{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line)}
-.mark{font-family:var(--font-ui);letter-spacing:.28em;font-size:.95em;color:var(--amber);text-decoration:none}
-.mark .chain{margin-right:8px}
-.mark b{font-weight:700}
-.mark span.lite{color:var(--muted);font-weight:400}
-.btn{display:inline-block;font-family:var(--font-ui);letter-spacing:.12em;text-transform:uppercase;
-  background:var(--amber);color:#1a1508;text-decoration:none;font-weight:700;
-  padding:12px 22px;border-radius:6px;font-size:.85em}
-.btn:hover{background:#e7b452}
-.btn.small{padding:9px 16px;font-size:.75em}
+.hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(330px,.72fr);gap:72px;align-items:center;padding:92px 0 84px;position:relative}
+.hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--line),var(--line-cool),transparent)}
+.hero-copy{position:relative;z-index:2}
+.eyebrow{font-family:var(--font-ui);letter-spacing:.22em;text-transform:uppercase;font-size:.64rem;line-height:1.7;color:var(--muted);margin-bottom:18px;max-width:760px}
+.beta{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-ui);letter-spacing:.18em;font-size:.62rem;color:var(--green);border:1px solid rgba(121,214,140,.30);border-radius:999px;padding:7px 13px;margin-bottom:22px;background:rgba(121,214,140,.06)}
+.beta::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px rgba(121,214,140,.8)}
+h1{font-size:clamp(2.7rem,6.2vw,5.5rem);line-height:.98;letter-spacing:-.055em;font-weight:800;color:#f6f7f2;margin-bottom:26px;max-width:12ch;text-wrap:balance}
+h1::after{content:"";display:block;width:86px;height:3px;margin-top:26px;border-radius:99px;background:linear-gradient(90deg,var(--brass-hi),var(--cyan))}
+.lede{max-width:68ch;color:var(--text2);margin-bottom:20px;font-size:clamp(1rem,1.25vw,1.08rem)}
+.lede b{color:var(--text);font-weight:700}
+.hero-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:30px}
+.hero-points{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}
+.hero-point{font-family:var(--font-ui);font-size:.62rem;letter-spacing:.08em;color:var(--text2);padding:8px 11px;border:1px solid rgba(255,255,255,.08);border-radius:999px;background:rgba(255,255,255,.025)}
+.hero-point strong{color:var(--cyan);font-weight:700}
+.shot{position:relative;margin:0 auto;width:min(100%,390px);isolation:isolate;padding:10px 0 0}
+.shot::before{content:"";position:absolute;inset:4% -18% -8%;z-index:-2;background:radial-gradient(ellipse at 50% 42%,rgba(89,217,210,.24),rgba(227,179,91,.10) 38%,transparent 70%);filter:blur(34px);opacity:.9}
+.shot::after{content:"LIVE FIELD VIEW";position:absolute;top:-12px;left:-12px;z-index:4;padding:8px 12px;border:1px solid rgba(89,217,210,.28);border-radius:999px;background:rgba(5,13,14,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:var(--cyan);font-family:var(--font-ui);font-size:.56rem;letter-spacing:.15em;box-shadow:0 10px 26px rgba(0,0,0,.32)}
+.shot img{width:100%;height:auto;display:block;border-radius:24px;border:1px solid rgba(227,179,91,.22);box-shadow:0 36px 90px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.035);background:transparent}
+.shot figcaption{font-family:var(--font-ui);font-size:.60rem;letter-spacing:.14em;color:var(--muted);text-align:center;margin-top:19px;text-transform:uppercase}
+.shot.image-missing{display:none}
 
-/* hero */
-.hero{padding:56px 0 20px}
-.beta{display:inline-block;font-family:var(--font-ui);letter-spacing:.22em;font-size:.68em;
-  color:var(--green);border:1px solid rgba(124,194,107,.45);border-radius:999px;
-  padding:5px 14px;margin-bottom:18px}
-.eyebrow{font-family:var(--font-ui);letter-spacing:.3em;text-transform:uppercase;font-size:.72em;color:var(--muted);margin-bottom:18px}
-h1{font-size:clamp(2rem,5.5vw,3.1rem);line-height:1.12;font-weight:700;color:#efe9d6;margin-bottom:20px;max-width:14ch}
-.lede{max-width:62ch;color:var(--text);margin-bottom:26px}
-.lede b{color:#efe9d6}
+section{padding:92px 0;border-top:1px solid rgba(255,255,255,.055);position:relative}
+section::before{content:attr(data-index);position:absolute;right:0;top:74px;color:rgba(255,255,255,.035);font-family:var(--font-ui);font-size:clamp(4rem,12vw,8rem);font-weight:800;line-height:1;pointer-events:none}
+.kicker{font-family:var(--font-ui);letter-spacing:.22em;text-transform:uppercase;font-size:.64rem;color:var(--brass);margin-bottom:12px}
+h2{font-size:clamp(2rem,4.5vw,3.45rem);line-height:1.08;letter-spacing:-.035em;color:#f4f6f1;margin-bottom:25px;max-width:18ch;text-wrap:balance}
+section>p,section>.split>.txt>p{max-width:72ch;margin-bottom:17px;color:var(--text2)}
+section b{color:var(--text)}
+.note{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(20,31,32,.94),rgba(12,20,21,.88));border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:0 22px 56px rgba(0,0,0,.23)}
+.note::before{content:"“";position:absolute;right:24px;top:-20px;color:rgba(227,179,91,.09);font-family:Georgia,serif;font-size:11rem;line-height:1}
+.note p{position:relative;color:var(--text2);max-width:76ch;margin-bottom:16px}.note .sig{position:relative;font-family:var(--font-ui);letter-spacing:.08em;color:var(--brass);margin-top:24px}
 
-/* hero image */
-.shot{margin:44px auto 0;max-width:400px}
-.shot img{width:100%;height:auto;display:block;border-radius:22px;border:1px solid var(--line);
-  box-shadow:0 24px 70px rgba(0,0,0,.55)}
-.shot figcaption{font-family:var(--font-ui);font-size:.72em;letter-spacing:.14em;color:var(--muted);
-  text-align:center;margin-top:14px;text-transform:uppercase}
+ul.tools{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:none;margin-top:34px}
+ul.tools li{position:relative;min-height:126px;padding:22px 22px 20px 52px;border:1px solid rgba(255,255,255,.07);border-radius:17px;background:linear-gradient(145deg,rgba(18,29,30,.82),rgba(10,17,18,.76));color:var(--text2);box-shadow:inset 0 1px rgba(255,255,255,.025);transition:transform .2s ease,border-color .2s ease,background .2s ease}
+ul.tools li:hover{transform:translateY(-3px);border-color:rgba(227,179,91,.28);background:linear-gradient(145deg,rgba(23,36,37,.9),rgba(12,20,21,.82))}
+ul.tools li::before{content:"+";position:absolute;left:20px;top:20px;display:grid;place-items:center;width:22px;height:22px;border:1px solid rgba(89,217,210,.25);border-radius:7px;color:var(--cyan);font-family:var(--font-ui);font-weight:700;font-size:.8rem;background:rgba(89,217,210,.05)}
+ul.tools b{color:var(--text);font-weight:700}
 
-/* sections */
-section{padding:64px 0;border-top:1px solid var(--line)}
-.kicker{font-family:var(--font-ui);letter-spacing:.3em;text-transform:uppercase;font-size:.72em;color:var(--amber-dim);margin-bottom:10px}
-h2{font-size:clamp(1.5rem,3.5vw,2rem);color:#efe9d6;margin-bottom:18px}
-section p{max-width:66ch;margin-bottom:16px}
+#phone,#deeds,#ngs{display:grid;grid-template-columns:minmax(210px,.35fr) minmax(0,.65fr);column-gap:70px;align-items:start}
+#phone .kicker,#phone h2,#deeds .kicker,#deeds h2,#ngs .kicker,#ngs h2{grid-column:1}
+#phone p,#deeds p,#ngs p{grid-column:2}
+#phone .kicker,#deeds .kicker,#ngs .kicker{grid-row:1}
+#phone h2,#deeds h2,#ngs h2{grid-row:2 / span 6;position:sticky;top:116px}
+#phone p:first-of-type,#deeds p:first-of-type,#ngs p:first-of-type{grid-row:1;margin-top:34px}
 
-/* maker note */
-.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:8px;padding:26px 28px}
-.note .sig{font-family:var(--font-ui);letter-spacing:.1em;color:var(--amber);margin-top:18px}
+.plats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
+.plat{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(19,30,31,.9),rgba(10,17,18,.84));border:1px solid rgba(255,255,255,.075);border-radius:18px;padding:24px;min-height:210px}
+.plat::after{content:"";position:absolute;width:130px;height:130px;right:-55px;bottom:-65px;border:1px solid var(--line);border-radius:50%}
+.plat h3{font-family:var(--font-ui);letter-spacing:.16em;font-size:.7rem;text-transform:uppercase;color:var(--brass);margin-bottom:16px}
+.plat ol{margin-left:18px;color:var(--text2);font-size:.93rem}.plat li{margin:9px 0;padding-left:4px}
+.warn{background:linear-gradient(145deg,rgba(54,31,21,.72),rgba(30,21,16,.72));border:1px solid rgba(239,124,112,.30);border-left:3px solid var(--red);border-radius:16px;padding:20px 22px;margin-top:22px;color:#d8c8bd;font-size:.93rem}.warn b{color:#ffd0c8}
 
-/* feature list */
-ul.tools{list-style:none;max-width:70ch}
-ul.tools li{padding:12px 0 12px 30px;position:relative;border-top:1px solid rgba(255,255,255,.05)}
-ul.tools li:first-child{border-top:0}
-ul.tools li::before{content:"›";position:absolute;left:6px;color:var(--amber);font-family:var(--font-ui);font-weight:700}
-ul.tools b{color:#efe9d6;font-weight:600}
+.cta{position:relative;text-align:center;padding:92px 28px;margin:20px 0 74px;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:radial-gradient(circle at 50% 0%,rgba(227,179,91,.14),transparent 55%),linear-gradient(145deg,rgba(17,28,29,.92),rgba(8,14,15,.9));box-shadow:var(--shadow)}
+.cta::before{content:"READY FOR THE FIELD";display:block;margin-bottom:16px;color:var(--cyan);font-family:var(--font-ui);font-size:.62rem;letter-spacing:.21em}
+.cta p{max-width:700px;margin:0 auto 28px;color:var(--text2);font-size:1.06rem}
+footer{border-top:1px solid var(--line-cool);padding:46px 0 64px;color:var(--muted);font-size:.88rem}
+footer .mark{display:inline-flex;margin-bottom:20px}footer .legal{max-width:80ch;margin-top:20px;color:#6f7a75;font-size:.82rem}
 
-/* imagery split */
-.split{display:flex;gap:36px;align-items:flex-start;flex-wrap:wrap}
-.split .txt{flex:1 1 340px;min-width:280px}
-.split .pic{flex:1 1 300px;min-width:260px;max-width:380px}
-.split .pic img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--line)}
-.split .pic figcaption{font-family:var(--font-ui);font-size:.7em;letter-spacing:.12em;color:var(--muted);margin-top:10px;text-transform:uppercase}
+@media (max-width:900px){
+  .top-nav{display:none}.hero{grid-template-columns:1fr;gap:54px;padding-top:70px}.hero-copy{text-align:left}.shot{width:min(82vw,410px)}
+  #phone,#deeds,#ngs{display:block}#phone h2,#deeds h2,#ngs h2{position:static}.plats{grid-template-columns:1fr}.hero::after{left:0;right:0}
+}
+@media (max-width:650px){
+  .wrap{width:min(100% - 28px,1180px)}header{min-height:68px}.mark{font-size:.69rem;letter-spacing:.15em}.mark .chain{width:30px;height:30px}.btn.small{padding:9px 12px}
+  .hero{padding:58px 0 66px;gap:46px}h1{font-size:clamp(2.55rem,13vw,4rem);max-width:10ch}.lede{font-size:.98rem}.shot::after{left:-6px;top:14px}
+  section{padding:72px 0}section::before{display:none}.note{padding:26px 23px}ul.tools{grid-template-columns:1fr}ul.tools li{min-height:auto}.cta{padding:72px 22px;margin-bottom:54px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,ul.tools li{transition:none}}
 
-/* install */
-.plats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:24px}
-.plat{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px}
-.plat h3{font-family:var(--font-ui);letter-spacing:.18em;font-size:.8em;text-transform:uppercase;color:var(--amber);margin-bottom:12px}
-.plat ol{margin-left:20px;font-size:.95em}
-.plat li{margin:6px 0}
-.warn{background:#2a1e10;border:1px solid rgba(217,120,60,.4);border-radius:8px;padding:18px 20px;margin-top:26px;font-size:.95em}
-.warn b{color:#e7a452}
-
-/* cta band */
-.cta{text-align:center;padding:70px 0}
-.cta p{margin:0 auto 24px}
-
-/* footer */
-footer{border-top:1px solid var(--line);padding:44px 0 60px;color:var(--muted);font-size:.9em}
-footer .mark{display:block;margin-bottom:14px}
-footer .legal{max-width:70ch;margin-top:18px;font-size:.92em}
+@media (max-width:720px){
+  .hero{padding-top:64px;gap:52px}
+  .shot{width:min(88vw,360px)}
+  .shot::after{left:8px;top:-10px}
+  .shot img{border-radius:20px}
+}
 </style>
 </head>
 <body>
-
 <div class="wrap">
 <header>
-  <a class="mark" href="https://chainlinksurvey.com"><span class="chain">⛓</span><b>CHAINLINK</b> <span class="lite">SURVEY</span></a>
-  <a class="btn small" href="https://app.chainlinksurvey.com">Open App →</a>
+<a class="mark" href="https://chainlinksurvey.com"><span class="chain">⛓</span><b>CHAINLINK</b> <span class="lite">SURVEY</span></a>
+<nav aria-label="Primary" class="top-nav"><a href="#how">How it works</a><a href="#tools">Tools</a><a href="#deeds">Deeds</a><a href="#install">Install</a></nav><a class="btn small" href="https://app.chainlinksurvey.com">Open App →</a>
 </header>
-
-<div class="hero">
-  <div class="eyebrow">Field data · COGO · Stakeout · GPS + Aerial imagery · Deed plotting · NGS benchmarks</div>
-  <div class="beta">BETA · FREE FOR NOW</div>
-  <h1>A survey data collector, already in your pocket.</h1>
-  <p class="lede">Import your existing points, set up over a known or assumed point, and shoot. ChainLink records your shots and works out coordinates in 2D or full 3D, then runs the COGO — inverse, intersections, resection, traverse adjustment, areas, and stakeout to points, lines, and curves. Works with no signal, with whatever total station you're running, and sends the file back to the office when you're done.</p>
-  <p class="lede">And because it lives on a phone, it can do what a data collector can't: <b>one GPS fix puts your job on real State&nbsp;Plane coordinates</b>, draws your work over <b>live aerial imagery</b>, shows where you're standing, and walks you to any point.</p>
-  <a class="btn" href="https://app.chainlinksurvey.com">Open the App →</a>
-
-  <figure class="shot">
-    <img src="landing-hero-phone.jpg" width="1080" height="2020"
-         alt="ChainLink on a phone — a measured traverse with bearings and distances drawn over live satellite imagery, with the crew's GPS position shown as a blue dot"
-         fetchpriority="high">
-    <figcaption>A real traverse, on real imagery, on a phone</figcaption>
-  </figure>
+<div class="hero"><div class="hero-copy"><div class="eyebrow">Field data · COGO · Stakeout · GPS + Aerial imagery · Deed plotting · NGS benchmarks</div><div class="beta">BETA · FREE FOR NOW</div><h1>A survey data collector, already in your pocket.</h1><p class="lede">Import your existing points, set up over a known or assumed point, and shoot. ChainLink records your shots and works out coordinates in 2D or full 3D, then runs the COGO — inverse, intersections, resection, traverse adjustment, areas, and stakeout to points, lines, and curves. Works with no signal, with whatever total station you're running, and sends the file back to the office when you're done.</p><p class="lede">And because it lives on a phone, it can do what a data collector can't: <b>one GPS fix puts your job on real State Plane coordinates</b>, draws your work over <b>live aerial imagery</b>, shows where you're standing, and walks you to any point.</p><div class="hero-actions"><a class="btn" href="https://app.chainlinksurvey.com">Open the App →</a></div><div class="hero-points"><span class="hero-point"><strong>OFFLINE</strong> · after first load</span><span class="hero-point"><strong>NO ACCOUNT</strong> · open and work</span><span class="hero-point"><strong>ANY TOTAL STATION</strong> · manual entry</span></div></div><figure class="shot">
+<img alt="ChainLink on a phone — a measured traverse with bearings and distances drawn over live satellite imagery, with the crew's GPS position shown as a blue dot" decoding="async" fetchpriority="high" height="2020" onerror="this.closest('figure').classList.add('image-missing')" src="landing-hero-phone.jpg" width="1080"/>
+<figcaption>A real traverse, on real imagery, on a phone</figcaption>
+</figure></div>
+<section data-index="01" id="note">
+<div class="kicker">A note from the maker</div>
+<div class="note">
+<p>I work on a survey crew. My last outfit ran high-tech gear. Then I moved across the country to support family, and the field tool I was handed at the new job was an HP 48GX — a graphing calculator from the early '90s with survey programs loaded on it, far too antiquated for modern tasks, in my opinion. I had a smartphone in my pocket the whole time, but I couldn't find a single app that would record measurements and run COGO on a phone.</p>
+<p>So I built what I wanted: something that runs on the phone already on me and works with no signal.</p>
+<p>It's grown well past what I first needed. It works in 2D or full 3D, handles the heavier COGO — resection, intersections, traverse adjustment, areas with curved boundaries — and stakes out points, lines, and curves. It'll reduce two-face shots, average points for tighter control, apply atmospheric and scale corrections, and export to CSV, DXF, LandXML, KML, or a PDF field book for the office. Now it'll even put your work on live aerial imagery from one GPS fix. I hope it's useful for you.</p>
+<div class="sig">— Michael P. Ross</div>
 </div>
-
-<section id="note">
-  <div class="kicker">A note from the maker</div>
-  <div class="note">
-    <p>I work on a survey crew. My last outfit ran high-tech gear. Then I moved across the country to support family, and the field tool I was handed at the new job was an HP&nbsp;48GX — a graphing calculator from the early '90s with survey programs loaded on it, far too antiquated for modern tasks, in my opinion. I had a smartphone in my pocket the whole time, but I couldn't find a single app that would record measurements and run COGO on a phone.</p>
-    <p>So I built what I wanted: something that runs on the phone already on me and works with no signal.</p>
-    <p>It's grown well past what I first needed. It works in 2D or full 3D, handles the heavier COGO — resection, intersections, traverse adjustment, areas with curved boundaries — and stakes out points, lines, and curves. It'll reduce two-face shots, average points for tighter control, apply atmospheric and scale corrections, and export to CSV, DXF, LandXML, KML, or a PDF field book for the office. Now it'll even put your work on live aerial imagery from one GPS fix. I hope it's useful for you.</p>
-    <div class="sig">— Michael P. Ross</div>
-  </div>
 </section>
-
-<section id="how">
-  <div class="kicker">What it is</div>
-  <h2>How it works.</h2>
-  <p>ChainLink is a single self-contained app — nothing to install, no account, and it keeps working with no signal once it's loaded. It turns the angles and distances from the gun into real coordinates, draws them on a plot you can see and edit, and does the layout math.</p>
-  <p>Whether you've <b>never had a collector</b>, <b>yours just quit in the field</b>, or you're <b>laying out your own project</b> with a borrowed or used gun — it's the same tool, and you don't have to be licensed to use it.</p>
+<section data-index="02" id="how">
+<div class="kicker">What it is</div>
+<h2>How it works.</h2>
+<p>ChainLink is a single self-contained app — nothing to install, no account, and it keeps working with no signal once it's loaded. It turns the angles and distances from the gun into real coordinates, draws them on a plot you can see and edit, and does the layout math.</p>
+<p>Whether you've <b>never had a collector</b>, <b>yours just quit in the field</b>, or you're <b>laying out your own project</b> with a borrowed or used gun — it's the same tool, and you don't have to be licensed to use it.</p>
 </section>
-
-<section id="tools">
-  <div class="kicker">What it does</div>
-  <h2>The tools it has.</h2>
-  <ul class="tools">
-    <li>Turns your shots into coordinates, with the weather and prism corrections built in</li>
-    <li>Distance and direction between any two points, and find points where lines cross</li>
-    <li>Guides you to lay out a point, a line, or a curve — tells you which way to move the rod</li>
-    <li>Draw lines and curves, get areas and acreage, work along a baseline</li>
-    <li><b>Starts a job on your state's official coordinate grid</b> from one GPS fix, with the ground elevation filled in from USGS survey data</li>
-    <li><b>Shows your work over live aerial imagery or USGS topo maps</b>, with your position as a blue dot — and saves the imagery for offline use</li>
-    <li><b>Walks you to any point</b> with live distance and direction — handy for finding a corner in the brush</li>
-    <li><b>Shows NGS survey monuments on the map</b> — condition-colored, with published State Plane coordinates and the government's directions to each disk</li>
-    <li><b>Plots deeds from pasted text or a photo</b> — boundary, carve-outs, and easements at their right-of-way width, with net acreage from true arc math</li>
-    <li>Send your work to the office — CSV, DXF, LandXML, KML for Google Earth, a PDF plot or field book</li>
-    <li>Works with no signal. Pan, zoom, and tap the plot to fix anything</li>
-  </ul>
+<section data-index="03" id="tools">
+<div class="kicker">What it does</div>
+<h2>The tools it has.</h2>
+<ul class="tools">
+<li>Turns your shots into coordinates, with the weather and prism corrections built in</li>
+<li>Distance and direction between any two points, and find points where lines cross</li>
+<li>Guides you to lay out a point, a line, or a curve — tells you which way to move the rod</li>
+<li>Draw lines and curves, get areas and acreage, work along a baseline</li>
+<li><b>Starts a job on your state's official coordinate grid</b> from one GPS fix, with the ground elevation filled in from USGS survey data</li>
+<li><b>Shows your work over live aerial imagery or USGS topo maps</b>, with your position as a blue dot — and saves the imagery for offline use</li>
+<li><b>Walks you to any point</b> with live distance and direction — handy for finding a corner in the brush</li>
+<li><b>Shows NGS survey monuments on the map</b> — condition-colored, with published State Plane coordinates and the government's directions to each disk</li>
+<li><b>Plots deeds from pasted text or a photo</b> — boundary, carve-outs, and easements at their right-of-way width, with net acreage from true arc math</li>
+<li>Send your work to the office — CSV, DXF, LandXML, KML for Google Earth, a PDF plot or field book</li>
+<li>Works with no signal. Pan, zoom, and tap the plot to fix anything</li>
+</ul>
 </section>
-
-<section id="phone">
-  <div class="kicker">The phone earns its keep</div>
-  <h2>It knows where it's standing.</h2>
-  <p>A data collector only knows the numbers you feed it. Your phone also knows where it is on Earth — so ChainLink uses that.</p>
-  <p>Stand at your starting point and take one GPS fix: the job lands on your state's real coordinate grid, the aerial photo lines up behind your linework, and from then on a blue dot shows where you are on your own survey. Pick any point and the app gives you live distance and direction to walk to it.</p>
-  <p>Scouting a property? Drop a pin at anything you find — an iron, a gate, a culvert — and it's stored as a point, clearly tagged as GPS-grade so it's never confused with an instrument shot. The precise work still belongs to the gun; the phone gets you there and shows you the whole picture.</p>
+<section data-index="04" id="phone">
+<div class="kicker">The phone earns its keep</div>
+<h2>It knows where it's standing.</h2>
+<p>A data collector only knows the numbers you feed it. Your phone also knows where it is on Earth — so ChainLink uses that.</p>
+<p>Stand at your starting point and take one GPS fix: the job lands on your state's real coordinate grid, the aerial photo lines up behind your linework, and from then on a blue dot shows where you are on your own survey. Pick any point and the app gives you live distance and direction to walk to it.</p>
+<p>Scouting a property? Drop a pin at anything you find — an iron, a gate, a culvert — and it's stored as a point, clearly tagged as GPS-grade so it's never confused with an instrument shot. The precise work still belongs to the gun; the phone gets you there and shows you the whole picture.</p>
 </section>
-
-<section id="deeds">
-  <div class="kicker">New · Deed plotting</div>
-  <h2>Paste a deed. Watch it draw itself.</h2>
-  <p>Paste a legal description — from a deed search, a title commitment, or a photo of the paper — and ChainLink reads the calls: bearings, distances, curves, even the old units (chains, links, rods, poles, varas, meters). Then it plots the tract <b>on the aerial imagery, right where the land is</b>.</p>
-  <p>It reads the whole record, not just the perimeter. Carve-outs ("less and except") and easements come in as their own figures, each placed by its own tie courses from the point of beginning — easements drawn at their stated right-of-way width. Net acreage comes out with curves computed as true arcs, not chord shortcuts.</p>
-  <p>And it's honest software: a carve-out that lands outside its parent tract gets flagged on the plot, not painted over. Sometimes that's a figure waiting to be placed. Sometimes you've just found a defect in the record — the kind of thing a retracement surveyor gets paid to notice.</p>
-  <p>Then the part no desktop deed program can do: put the phone in your pocket and <b>walk to the corners</b>. Every plotted corner is a live point — stakeout, inverse, and GPS navigation all work on it.</p>
-  <p><b>One honest tip:</b> the built-in 📷 camera works offline, but its text reading is rough. <b>Google Lens reads deeds far better</b> — snap the page with Lens, copy the text, and paste it in. A scanner app that makes searchable PDFs (Adobe Scan, Microsoft Lens) works even better for multi-page deeds: the app reads the PDF's text directly.</p>
+<section data-index="05" id="deeds">
+<div class="kicker">New · Deed plotting</div>
+<h2>Paste a deed. Watch it draw itself.</h2>
+<p>Paste a legal description — from a deed search, a title commitment, or a photo of the paper — and ChainLink reads the calls: bearings, distances, curves, even the old units (chains, links, rods, poles, varas, meters). Then it plots the tract <b>on the aerial imagery, right where the land is</b>.</p>
+<p>It reads the whole record, not just the perimeter. Carve-outs ("less and except") and easements come in as their own figures, each placed by its own tie courses from the point of beginning — easements drawn at their stated right-of-way width. Net acreage comes out with curves computed as true arcs, not chord shortcuts.</p>
+<p>And it's honest software: a carve-out that lands outside its parent tract gets flagged on the plot, not painted over. Sometimes that's a figure waiting to be placed. Sometimes you've just found a defect in the record — the kind of thing a retracement surveyor gets paid to notice.</p>
+<p>Then the part no desktop deed program can do: put the phone in your pocket and <b>walk to the corners</b>. Every plotted corner is a live point — stakeout, inverse, and GPS navigation all work on it.</p>
+<p><b>One honest tip:</b> the built-in 📷 camera works offline, but its text reading is rough. <b>Google Lens reads deeds far better</b> — snap the page with Lens, copy the text, and paste it in. A scanner app that makes searchable PDFs (Adobe Scan, Microsoft Lens) works even better for multi-page deeds: the app reads the PDF's text directly.</p>
 </section>
-
-<section id="ngs">
-  <div class="kicker">New · NGS benchmarks</div>
-  <h2>The government's survey marks, on your map.</h2>
-  <p>Scattered across every county are NGS survey monuments — brass disks set in concrete and bridge abutments, some over a century old, each with an officially published position. Finding them used to mean a government website and a stack of datasheets.</p>
-  <p>In ChainLink they just <b>appear on your imagery</b>: little triangles, colored by their last recovery — green for found-in-good-shape, amber for rough or long-unvisited. Confirmed-destroyed marks stay hidden so they never waste your morning. Tap one and you get the whole story: what the disk is, what's stamped on it, what it's set in, when someone last found it — and on request, the government's own walking directions to it, written by whoever set or recovered it.</p>
-  <p>Then the part that matters: the card carries the mark's <b>published NAD&nbsp;83(2011) State Plane coordinate, already in your job's grid</b>. Create a point from it and that official value is in your job — export it, stake to it, tie your traverse to it. It's the coordinate an RTK rover would navigate to, and it connects your work to the National Spatial Reference System through a brass disk half a mile from the job.</p>
-  <p>Fetched once over mobile data, stored with the job — dead zones don't matter after that.</p>
+<section data-index="06" id="ngs">
+<div class="kicker">New · NGS benchmarks</div>
+<h2>The government's survey marks, on your map.</h2>
+<p>Scattered across every county are NGS survey monuments — brass disks set in concrete and bridge abutments, some over a century old, each with an officially published position. Finding them used to mean a government website and a stack of datasheets.</p>
+<p>In ChainLink they just <b>appear on your imagery</b>: little triangles, colored by their last recovery — green for found-in-good-shape, amber for rough or long-unvisited. Confirmed-destroyed marks stay hidden so they never waste your morning. Tap one and you get the whole story: what the disk is, what's stamped on it, what it's set in, when someone last found it — and on request, the government's own walking directions to it, written by whoever set or recovered it.</p>
+<p>Then the part that matters: the card carries the mark's <b>published NAD 83(2011) State Plane coordinate, already in your job's grid</b>. Create a point from it and that official value is in your job — export it, stake to it, tie your traverse to it. It's the coordinate an RTK rover would navigate to, and it connects your work to the National Spatial Reference System through a brass disk half a mile from the job.</p>
+<p>Fetched once over mobile data, stored with the job — dead zones don't matter after that.</p>
 </section>
-
-<section id="install">
-  <div class="kicker">Install it</div>
-  <h2>Add it to your device like an app.</h2>
-  <p>ChainLink is a web app — open it once and add it to your home screen, then it launches full-screen and runs offline. No store, no download.</p>
-  <div class="plats">
-    <div class="plat">
-      <h3>Android</h3>
-      <ol>
-        <li>Open the app in Chrome</li>
-        <li>Tap the ⋮ menu, top-right</li>
-        <li>Tap <b>Install app</b> (or Add to Home screen)</li>
-      </ol>
-    </div>
-    <div class="plat">
-      <h3>iPhone / iPad</h3>
-      <ol>
-        <li>Open the app in Safari</li>
-        <li>Tap the Share button</li>
-        <li>Tap <b>Add to Home Screen</b></li>
-      </ol>
-    </div>
-    <div class="plat">
-      <h3>PC / Mac</h3>
-      <ol>
-        <li>Open the app in Chrome or Edge</li>
-        <li>Click the install icon in the address bar</li>
-        <li>Click <b>Install</b></li>
-      </ol>
-    </div>
-  </div>
-  <div class="warn">⚠ <b>iPhone &amp; iPad — read this.</b> On Apple devices, some file features are limited (saving exports to a chosen folder isn't supported in Safari), and iOS may clear a web app's stored data after long periods without opening it. <b>Export your jobs to CSV regularly</b> so you always have a permanent copy — don't rely on the phone keeping them indefinitely.</div>
+<section data-index="07" id="install">
+<div class="kicker">Install it</div>
+<h2>Add it to your device like an app.</h2>
+<p>ChainLink is a web app — open it once and add it to your home screen, then it launches full-screen and runs offline. No store, no download.</p>
+<div class="plats">
+<div class="plat">
+<h3>Android</h3>
+<ol>
+<li>Open the app in Chrome</li>
+<li>Tap the ⋮ menu, top-right</li>
+<li>Tap <b>Install app</b> (or Add to Home screen)</li>
+</ol>
+</div>
+<div class="plat">
+<h3>iPhone / iPad</h3>
+<ol>
+<li>Open the app in Safari</li>
+<li>Tap the Share button</li>
+<li>Tap <b>Add to Home Screen</b></li>
+</ol>
+</div>
+<div class="plat">
+<h3>PC / Mac</h3>
+<ol>
+<li>Open the app in Chrome or Edge</li>
+<li>Click the install icon in the address bar</li>
+<li>Click <b>Install</b></li>
+</ol>
+</div>
+</div>
+<div class="warn">⚠ <b>iPhone &amp; iPad — read this.</b> On Apple devices, some file features are limited (saving exports to a chosen folder isn't supported in Safari), and iOS may clear a web app's stored data after long periods without opening it. <b>Export your jobs to CSV regularly</b> so you always have a permanent copy — don't rely on the phone keeping them indefinitely.</div>
 </section>
-
 <div class="cta">
-  <p>ChainLink is in beta — everything in it is <b>free while it's in beta</b>. No account, no card, nothing to sign up for; open it and it's yours.</p>
-  <a class="btn" href="https://app.chainlinksurvey.com">Open the App →</a>
+<p>ChainLink is in beta — everything in it is <b>free while it's in beta</b>. No account, no card, nothing to sign up for; open it and it's yours.</p>
+<a class="btn" href="https://app.chainlinksurvey.com">Open the App →</a>
 </div>
-
 <footer>
-  <a class="mark" href="https://chainlinksurvey.com"><span class="chain">⛓</span><b>CHAINLINK</b> <span class="lite">SURVEY</span></a>
-  <div>Questions, bugs, or feedback — <a href="mailto:chainlinksurvey@gmail.com">chainlinksurvey@gmail.com</a><br>chainlinksurvey.com</div>
-  <div class="legal">ChainLink is a field tool provided as-is. Always verify critical measurements against known control, and follow the procedures and regulations that apply to your work. GPS positions, aerial imagery, and NGS monument positions are for reference and navigation — they are not survey measurements. It is not a substitute for licensed surveying where the law requires one.</div>
+<a class="mark" href="https://chainlinksurvey.com"><span class="chain">⛓</span><b>CHAINLINK</b> <span class="lite">SURVEY</span></a>
+<div>Questions, bugs, or feedback — <a href="mailto:chainlinksurvey@gmail.com">chainlinksurvey@gmail.com</a><br/>chainlinksurvey.com</div>
+<div class="legal">ChainLink is a field tool provided as-is. Always verify critical measurements against known control, and follow the procedures and regulations that apply to your work. GPS positions, aerial imagery, and NGS monument positions are for reference and navigation — they are not survey measurements. It is not a substitute for licensed surveying where the law requires one.</div>
 </footer>
 </div>
-
 </body>
 </html>
