@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Traverse Closure and Compass Rule Adjustment | ChainLink Survey</title>
+<meta content="How traverse closure, precision ratio and the compass (Bowditch) rule work, with a worked example, and how to run the adjustment on your phone for free." name="description"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://chainlinksurvey.com/traverse-adjustment" rel="canonical"/>
+<meta content="article" property="og:type"/>
+<meta content="Traverse Closure and Compass Rule Adjustment | ChainLink Survey" property="og:title"/>
+<meta content="How traverse closure, precision ratio and the compass (Bowditch) rule work, with a worked example, and how to run the adjustment on your phone for free." property="og:description"/>
+<meta content="https://chainlinksurvey.com/traverse-adjustment" property="og:url"/>
+<meta content="https://chainlinksurvey.com/og-image.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://chainlinksurvey.com/og-image.jpg" name="twitter:image"/>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://chainlinksurvey.com/traverse-adjustment#page",
+   "url": "https://chainlinksurvey.com/traverse-adjustment",
+   "name": "Traverse Closure and Compass Rule Adjustment | ChainLink Survey",
+   "description": "How traverse closure, precision ratio and the compass (Bowditch) rule work, with a worked example, and how to run the adjustment on your phone for free.",
+   "isPartOf": {
+    "@id": "https://chainlinksurvey.com/#site"
+   },
+   "about": {
+    "@id": "https://chainlinksurvey.com/#app"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "ChainLink Survey",
+     "item": "https://chainlinksurvey.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Traverse adjustment",
+     "item": "https://chainlinksurvey.com/traverse-adjustment"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://chainlinksurvey.com/traverse-adjustment#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is a good precision ratio for a traverse?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It depends on the work and on your state's minimum technical standards, which set the required closure for boundary surveys. Ratios of 1:10,000 and better are common targets, and control traverses are held to tighter values. Check the standard that applies to your job."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between the compass rule and the transit rule?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The compass rule distributes the misclosure in proportion to each course's length. The transit rule distributes it in proportion to the size of each course's latitude and departure. ChainLink uses the compass rule. A least squares adjustment is the rigorous method and is not built in."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does the adjustment fix angular error?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The compass rule distributes the linear misclosure that remains. It does not check or balance the angles first, so look at your angular closure on its own if your procedures call for it."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="/feature.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="wrap">
+<header>
+<a class="mark" href="/"><span class="chain">⛓</span><b>CHAINLINK</b> <span class="lite">SURVEY</span></a>
+<a class="btn small" href="https://app.chainlinksurvey.com/">Open App →</a>
+</header>
+<nav aria-label="Breadcrumb" class="crumbs"><a href="/">ChainLink Survey</a> / Traverse adjustment</nav>
+<div class="intro">
+<div class="kicker">Traverse adjustment</div>
+<h1>Traverse closure and the compass rule, on your phone</h1>
+<p class="lede">A closed traverse should end exactly where it started. It never quite does. ChainLink Survey measures how far it misses, gives you the precision ratio, and distributes the error with the <b>compass rule</b>, also called the <b>Bowditch adjustment</b>. Here's how that works, with a worked example.</p>
+<div class="actions"><a class="btn" href="https://app.chainlinksurvey.com/">Open the App →</a><span class="sub">FREE IN BETA · NO ACCOUNT · WORKS OFFLINE</span></div>
+</div>
+<main>
+<section>
+<h2>Closure and precision</h2>
+<p>Add up the north–south components (latitudes) and east–west components (departures) of every course. On a perfect loop both sums are zero. What's left over is the misclosure in northing and easting, and the <b>linear misclosure</b> is the hypotenuse of those two.</p>
+<p>The <b>precision ratio</b> is the total length of the traverse divided by the linear misclosure, written as 1 : something. Bigger is better. A 1,600-foot loop that misses by 0.04 ft closes at about 1 : 40,000.</p>
+</section>
+<section>
+<h2>The compass rule</h2>
+<p>The compass rule assumes errors build up in proportion to distance. Each course gets a share of the misclosure equal to its share of the total length:</p>
+<p class="callout"><b>correction to latitude</b> = −(misclosure in N) × course length ÷ total length<br/><b>correction to departure</b> = −(misclosure in E) × course length ÷ total length</p>
+<p>Long courses take more of the correction and short ones less. The last point lands exactly on the start.</p>
+</section>
+<section>
+<h2>A worked example</h2>
+<p>A four-sided loop starting at N 5000.000, E 5000.000:</p>
+<div style="overflow-x:auto;max-width:72ch"><table class="tbl">
+<thead><tr><th>Course</th><th>Azimuth</th><th>Distance</th><th>Corr. N</th><th>Corr. E</th><th>Adjusted N, E</th></tr></thead>
+<tbody>
+<tr><td>1→2</td><td>034°59'38"</td><td>413.14</td><td>−0.009</td><td>−0.006</td><td>5338.441, 5236.925</td></tr>
+<tr><td>2→3</td><td>119°08'10"</td><td>386.67</td><td>−0.008</td><td>−0.006</td><td>5150.169, 5574.662</td></tr>
+<tr><td>3→4</td><td>215°16'30"</td><td>440.47</td><td>−0.009</td><td>−0.007</td><td>4790.564, 5320.283</td></tr>
+<tr><td>4→1</td><td>303°10'57"</td><td>382.68</td><td>−0.008</td><td>−0.006</td><td>5000.000, 5000.000</td></tr>
+</tbody></table></div>
+<p>Total length is 1,622.96 ft. The unadjusted loop misses by +0.034 N and +0.025 E, a linear misclosure of 0.042 ft, so the precision is about <b>1 : 38,000</b>. The corrections add up to exactly the misclosure with the sign flipped, and the loop closes. (Values are rounded for display.)</p>
+</section>
+<section>
+<h2>Doing it in ChainLink</h2>
+<p>Tap the traverse points in order on the plot, ending on your <b>closing shot</b>, the separate re-observation of the starting point, and tap <b>Done</b>. You'll see total distance, closure error in N and E, and the precision ratio.</p>
+<div class="callout"><b>Don't re-tap the starting point to close.</b> The closing shot is its own point. Tapping the start again forces a zero closure and hides the error.</div>
+<p>Apply the Bowditch adjustment and the traverse points move by their proportional corrections. <b>Sideshots move with the station they were shot from</b>, so topo stays tied to the adjusted traverse. Undo restores everything. Because the adjustment rewrites coordinates, export a CSV first.</p>
+</section>
+<section>
+<h2>Questions</h2>
+<div class="qa"><details open><summary>What is a good precision ratio for a traverse?</summary><p>It depends on the work and on your state&#x27;s minimum technical standards, which set the required closure for boundary surveys. Ratios of 1:10,000 and better are common targets, and control traverses are held to tighter values. Check the standard that applies to your job.</p></details><details><summary>What is the difference between the compass rule and the transit rule?</summary><p>The compass rule distributes the misclosure in proportion to each course&#x27;s length. The transit rule distributes it in proportion to the size of each course&#x27;s latitude and departure. ChainLink uses the compass rule. A least squares adjustment is the rigorous method and is not built in.</p></details><details><summary>Does the adjustment fix angular error?</summary><p>The compass rule distributes the linear misclosure that remains. It does not check or balance the angles first, so look at your angular closure on its own if your procedures call for it.</p></details></div>
+</section>
+<section>
+<h2>More from ChainLink Survey</h2>
+<ul class="related"><li><a href="/cogo-calculator">COGO calculator<span>Inverse, intersections, resection, curves, areas</span></a></li><li><a href="/total-station-data-collector">Data collector<span>Use your phone as a data collector for any total station</span></a></li><li><a href="/survey-stakeout-app">Stakeout<span>Points, lines, curves and cut/fill</span></a></li><li><a href="/">Everything it does<span>The full overview</span></a></li></ul>
+</section>
+</main>
+<div class="cta"><p>ChainLink Survey is <b>free while it's in beta</b>. No account, no card. Open it on your phone and add it to your home screen.</p><a class="btn" href="https://app.chainlinksurvey.com/">Open the App →</a></div>
+<footer>
+<a class="mark" href="/"><span class="chain">⛓</span><b>CHAINLINK</b> <span class="lite">SURVEY</span></a>
+<nav aria-label="Guides"><a href="/">Home</a><a href="/deed-plotter">Deed plotter</a><a href="/total-station-data-collector">Data collector</a><a href="/cogo-calculator">COGO calculator</a><a href="/traverse-adjustment">Traverse adjustment</a><a href="/survey-stakeout-app">Stakeout</a><a href="/ngs-benchmarks-map">NGS benchmarks</a><a href="/hp-48gx-alternative">HP 48GX replacement</a></nav>
+<div>Questions, bugs, or feedback: <a href="mailto:chainlinksurvey@gmail.com">chainlinksurvey@gmail.com</a></div>
+<div class="legal">ChainLink is a field tool provided as-is. Always verify critical measurements against known control, and follow the procedures and regulations that apply to your work. GPS positions, aerial imagery, and NGS monument positions are for reference and navigation. They are not survey measurements. It is not a substitute for licensed surveying where the law requires one.</div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://chainlinksurvey.com/</loc><lastmod>2026-10-16</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://chainlinksurvey.com/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://chainlinksurvey.com/deed-plotter</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://chainlinksurvey.com/total-station-data-collector</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://chainlinksurvey.com/cogo-calculator</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://chainlinksurvey.com/traverse-adjustment</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://chainlinksurvey.com/survey-stakeout-app</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://chainlinksurvey.com/ngs-benchmarks-map</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://chainlinksurvey.com/hp-48gx-alternative</loc><lastmod>2026-10-16</lastmod></url>
 </urlset>
