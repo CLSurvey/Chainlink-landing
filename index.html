@@ -4,8 +4,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>ChainLink Survey — Pocket Data Collector for Total Station Work</title>
-<meta content="Run a total station straight from your phone — no data collector. Shoot points, run the COGO, and see your work on live aerial imagery, current or historical. Paste a deed and watch it plot itself — exceptions, easements, aliquot parts, and diagnostics that tell you why it doesn't close. One GPS fix puts the job on State Plane coordinates, with NGS benchmarks and their published positions on the map. In beta — free for now, no account." name="description"/>
+<title>Free Total Station Data Collector &amp; COGO App | ChainLink Survey</title>
+<meta content="Use your phone as a total station data collector. Record shots, run COGO, stake out, and plot deeds on aerial imagery. Free, works offline, no account." name="description"/>
+<meta content="index,follow" name="robots"/>
 <link href="https://chainlinksurvey.com/" rel="canonical"/>
 <meta content="website" property="og:type"/>
 <meta content="ChainLink Survey — your total station, no data collector" property="og:title"/>
@@ -19,14 +20,62 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "ChainLink Survey",
-  "operatingSystem": "Any (web app — Android, iOS, Windows, Mac)",
-  "applicationCategory": "UtilitiesApplication",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "url": "https://app.chainlinksurvey.com",
-  "description": "Total station field data collection and COGO on a phone: shot reduction, traverse adjustment, stakeout, areas, GPS start on State Plane coordinates, live and historical aerial imagery backdrop, NGS survey monuments with published State Plane coordinates and recovery status, deed plotting from pasted legal descriptions with exceptions, easements, PLSS aliquot parts and closure diagnostics, coordinate list import by paste or photo, and exports to CSV, DXF, LandXML, and KML.",
-  "author": { "@type": "Person", "name": "Michael P. Ross" }
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://chainlinksurvey.com/#site",
+      "name": "ChainLink Survey",
+      "url": "https://chainlinksurvey.com/"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://chainlinksurvey.com/#app",
+      "name": "ChainLink Survey",
+      "alternateName": "ChainLink",
+      "operatingSystem": "Android, iOS, Windows, macOS (web app)",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Land surveying data collector and COGO",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "url": "https://app.chainlinksurvey.com/",
+      "screenshot": "https://chainlinksurvey.com/landing-hero-phone.jpg",
+      "image": "https://chainlinksurvey.com/og-image.jpg",
+      "description": "Total station field data collection and COGO on a phone: shot reduction in 2D or 3D, traverse adjustment, resection, intersections, stakeout, areas, GPS start on State Plane coordinates, live and historical aerial imagery, NGS survey monuments with published coordinates, deed plotting from pasted legal descriptions with closure diagnostics, and exports to CSV, DXF, LandXML, KML and PDF.",
+      "featureList": [
+        "Total station shot reduction in 2D and 3D",
+        "COGO: inverse, intersections, resection, traverse adjustment, area",
+        "Stakeout of points, lines and curves",
+        "GPS start on State Plane coordinates",
+        "Live and historical aerial imagery",
+        "NGS survey monuments with published coordinates",
+        "Deed and metes-and-bounds plotting with closure diagnostics",
+        "PLSS aliquot part plotting",
+        "Export to CSV, DXF, LandXML, KML and PDF",
+        "Works offline"
+      ],
+      "author": { "@type": "Person", "name": "Michael P. Ross" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://chainlinksurvey.com/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Can I use my phone as a data collector for my total station?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. You key in the angle and distance readings from the instrument and ChainLink reduces them to coordinates in 2D or full 3D, keeps the raw observations, and runs the COGO. There is no cable or Bluetooth link, so it works with any total station by manual entry." } },
+        { "@type": "Question", "name": "Is there a free COGO app for surveyors?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ChainLink is free while it is in beta, with no account and no card. It covers inverse, intersections, resection, traverse adjustment, areas with curved boundaries, and stakeout to points, lines and curves." } },
+        { "@type": "Question", "name": "Does it work without cell signal?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Once the app has loaded it works with no signal. Aerial imagery can be saved for offline use, and NGS benchmark data is stored with the job after it is fetched once." } },
+        { "@type": "Question", "name": "Can it plot a deed or a metes and bounds description?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Paste the legal description, or read it from a photo or a searchable PDF, and ChainLink reads the calls, including curves and old units such as chains, links, rods, poles and varas. It plots the tract on aerial imagery with its exceptions and easements, handles PLSS aliquot descriptions, and explains why a description does not close." } },
+        { "@type": "Question", "name": "Can it replace an HP 48GX or a survey calculator in the field?",
+          "acceptedAnswer": { "@type": "Answer", "text": "That is what it was built for. It records your shots, reduces them to coordinates and runs the COGO on the phone already in your pocket, and it sends the job to the office as CSV, DXF, LandXML, KML or a PDF plot and field book." } },
+        { "@type": "Question", "name": "Does it work on iPhone and Android?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is a web app: open it in Chrome on Android or Safari on iPhone and add it to your home screen. On iPhone and iPad, export your jobs to CSV regularly, because iOS can clear a web app's stored data after long periods without use." } },
+        { "@type": "Question", "name": "Do I need to be a licensed surveyor to use it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Crews without a collector, anyone whose collector quit in the field, and people laying out their own project with a borrowed or used gun can all use it. It is not a substitute for licensed surveying where the law requires one." } }
+      ]
+    }
+  ]
 }
 </script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><style>
@@ -141,6 +190,13 @@ ul.tools b{color:var(--text);font-weight:700}
 .plat ol{margin-left:18px;color:var(--text2);font-size:.93rem}.plat li{margin:9px 0;padding-left:4px}
 .warn{background:linear-gradient(145deg,rgba(54,31,21,.72),rgba(30,21,16,.72));border:1px solid rgba(239,124,112,.30);border-left:3px solid var(--red);border-radius:16px;padding:20px 22px;margin-top:22px;color:#d8c8bd;font-size:.93rem}.warn b{color:#ffd0c8}
 
+#faq .qa{max-width:860px;margin-top:30px;display:grid;gap:12px}
+#faq details{border:1px solid rgba(255,255,255,.07);border-radius:16px;background:linear-gradient(145deg,rgba(18,29,30,.82),rgba(10,17,18,.76));padding:0 22px}
+#faq summary{cursor:pointer;list-style:none;padding:19px 30px 19px 0;position:relative;color:var(--text);font-weight:700;font-size:1.02rem}
+#faq summary::-webkit-details-marker{display:none}
+#faq summary::after{content:"+";position:absolute;right:0;top:16px;color:var(--cyan);font-family:var(--font-ui);font-size:1.2rem}
+#faq details[open] summary::after{content:"–"}
+#faq details p{color:var(--text2);padding:0 0 20px;max-width:72ch}
 .cta{position:relative;text-align:center;padding:92px 28px;margin:20px 0 74px;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:radial-gradient(circle at 50% 0%,rgba(227,179,91,.14),transparent 55%),linear-gradient(145deg,rgba(17,28,29,.92),rgba(8,14,15,.9));box-shadow:var(--shadow)}
 .cta::before{content:"READY FOR THE FIELD";display:block;margin-bottom:16px;color:var(--cyan);font-family:var(--font-ui);font-size:.62rem;letter-spacing:.21em}
 .cta p{max-width:700px;margin:0 auto 28px;color:var(--text2);font-size:1.06rem}
@@ -170,7 +226,7 @@ footer .mark{display:inline-flex;margin-bottom:20px}footer .legal{max-width:80ch
 <div class="wrap">
 <header>
 <a class="mark" href="https://chainlinksurvey.com"><span class="chain">⛓</span><b>CHAINLINK</b> <span class="lite">SURVEY</span></a>
-<nav aria-label="Primary" class="top-nav"><a href="#how">How it works</a><a href="#tools">Tools</a><a href="#deeds">Deeds</a><a href="#install">Install</a></nav><a class="btn small" href="https://app.chainlinksurvey.com">Open App →</a>
+<nav aria-label="Primary" class="top-nav"><a href="#how">How it works</a><a href="#tools">Tools</a><a href="#deeds">Deeds</a><a href="#install">Install</a><a href="#faq">FAQ</a></nav><a class="btn small" href="https://app.chainlinksurvey.com">Open App →</a>
 </header>
 <div class="hero"><div class="hero-copy"><div class="eyebrow">Field data · COGO · Stakeout · GPS + Aerial imagery · Deed plotting · NGS benchmarks</div><div class="beta">BETA · FREE FOR NOW</div><h1>A survey data collector, already in your pocket.</h1><p class="lede">Import your existing points, set up over a known or assumed point, and shoot. ChainLink records your shots and works out coordinates in 2D or full 3D, then runs the COGO — inverse, intersections, resection, traverse adjustment, areas, and stakeout to points, lines, and curves. Works with no signal, with whatever total station you're running, and sends the file back to the office when you're done.</p><p class="lede">And because it lives on a phone, it can do what a data collector can't: <b>one GPS fix puts your job on real State Plane coordinates</b>, draws your work over <b>live aerial imagery</b>, shows where you're standing, and walks you to any point.</p><div class="hero-actions"><a class="btn" href="https://app.chainlinksurvey.com">Open the App →</a></div><div class="hero-points"><span class="hero-point"><strong>OFFLINE</strong> · after first load</span><span class="hero-point"><strong>NO ACCOUNT</strong> · open and work</span><span class="hero-point"><strong>ANY TOTAL STATION</strong> · manual entry</span></div></div><figure class="shot">
 <img alt="ChainLink on a phone — a measured traverse with bearings and distances drawn over live satellite imagery, with the crew's GPS position shown as a blue dot" decoding="async" fetchpriority="high" height="2020" onerror="this.closest('figure').classList.add('image-missing')" src="landing-hero-phone.jpg" width="1080"/>
@@ -269,6 +325,19 @@ footer .mark{display:inline-flex;margin-bottom:20px}footer .legal{max-width:80ch
 </div>
 </div>
 <div class="warn">⚠ <b>iPhone &amp; iPad — read this.</b> On Apple devices, some file features are limited (saving exports to a chosen folder isn't supported in Safari), and iOS may clear a web app's stored data after long periods without opening it. <b>Export your jobs to CSV regularly</b> so you always have a permanent copy — don't rely on the phone keeping them indefinitely.</div>
+</section>
+<section data-index="08" id="faq">
+<div class="kicker">Questions</div>
+<h2>Common questions.</h2>
+<div class="qa">
+<details open><summary>Can I use my phone as a data collector for my total station?</summary><p>Yes. You key in the angle and distance readings from the instrument and ChainLink reduces them to coordinates in 2D or full 3D, keeps the raw observations, and runs the COGO. There is no cable or Bluetooth link, so it works with any total station by manual entry.</p></details>
+<details><summary>Is there a free COGO app for surveyors?</summary><p>ChainLink is free while it is in beta, with no account and no card. It covers inverse, intersections, resection, traverse adjustment, areas with curved boundaries, and stakeout to points, lines and curves.</p></details>
+<details><summary>Does it work without cell signal?</summary><p>Yes. Once the app has loaded it works with no signal. Aerial imagery can be saved for offline use, and NGS benchmark data is stored with the job after it is fetched once.</p></details>
+<details><summary>Can it plot a deed or a metes and bounds description?</summary><p>Yes. Paste the legal description, or read it from a photo or a searchable PDF, and ChainLink reads the calls, including curves and old units such as chains, links, rods, poles and varas. It plots the tract on aerial imagery with its exceptions and easements, handles PLSS aliquot descriptions, and explains why a description does not close.</p></details>
+<details><summary>Can it replace an HP 48GX or a survey calculator in the field?</summary><p>That is what it was built for. It records your shots, reduces them to coordinates and runs the COGO on the phone already in your pocket, and it sends the job to the office as CSV, DXF, LandXML, KML or a PDF plot and field book.</p></details>
+<details><summary>Does it work on iPhone and Android?</summary><p>Yes. It is a web app: open it in Chrome on Android or Safari on iPhone and add it to your home screen. On iPhone and iPad, export your jobs to CSV regularly, because iOS can clear a web app's stored data after long periods without use.</p></details>
+<details><summary>Do I need to be a licensed surveyor to use it?</summary><p>No. Crews without a collector, anyone whose collector quit in the field, and people laying out their own project with a borrowed or used gun can all use it. It is not a substitute for licensed surveying where the law requires one.</p></details>
+</div>
 </section>
 <div class="cta">
 <p>ChainLink is in beta — everything in it is <b>free while it's in beta</b>. No account, no card, nothing to sign up for; open it and it's yours.</p>
